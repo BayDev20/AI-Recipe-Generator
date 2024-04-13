@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Suggestion App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Header Image" class="header-image">
+    <div class="container">
+        <h1>Chef Puccino at your service!</h1>
+        <p>Tell us what ingredients you have on hand, and we'll provide a custom recipe tailored just for two!</p>
+        <form method="post">
+            <input type="text" id="ingredients" name="ingredients" placeholder="Enter ingredients...">
+            <button type="submit">Get a Recipe!</button>
+        </form>
+        {% if recipes %}
+            <div>
+                <hr>
+                <h2> Try this!</h2>
+                <p>{{ recipes|safe }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
