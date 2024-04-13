@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load configuration from environment variables
 api_key = os.getenv('OPENAI_API_KEY')
-secret_key = os.getenv('FLASK_SECRET_KEY')
+secret_key = os.getenv('Flask_Secret_Key')
 
 # Check if necessary configurations are loaded
 if not api_key:
