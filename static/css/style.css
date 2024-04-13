@@ -14,7 +14,7 @@ body {
 }
 
 .container, .fliptainer {
-    width: 800px;
+    width: fit-content(90%);
     margin: 20px;
     background:#f5f5dc;
     padding: 20px;
