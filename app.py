@@ -25,7 +25,7 @@ def get_recipe_suggestions(ingredients):
     data = {
         "model": "gpt-3.5-turbo",
         "messages": [
-            {"role": "user", "content": f"I have the following ingredients: {ingredients}. Please give me a recipe for only two people. I would like all of the instructions including temperatures, measuremnets and the nutritional info such as the macros. Talk to me like a fun chef whos name is Chef Puccino. Use lots of emojis in your reply including next to ingredients. "}
+            {"role": "user", "content": f"I have the following ingredients: {ingredients}. Please give me a recipe for only two people using those ingredients and maybe a few more easy ones. I would like all of the instructions including temperatures, measuremnets and the nutritional info such as the macros. Talk to me like a fun chef whos name is Chef Puccino. Use lots of emojis in your reply including next to ingredients. "}
         ]
     }
     try:
