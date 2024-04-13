@@ -1,16 +1,14 @@
 from flask import Flask, request, render_template, session
 import requests
-import configparser
+import os  # Only os is needed for env variables
 
 app = Flask(__name__)
 
-# Load configuration
-config = configparser.ConfigParser()
-config.read('config/config.ini')
-api_key = config['DEFAULT']['OpenAI_API_Key']
-secret_key = config['DEFAULT']['Flask_Secret_Key']
+# Load configuration from environment variables
+api_key = os.getenv('OPENAI_API_KEY')
+secret_key = os.getenv('FLASK_SECRET_KEY')
 
-app.config['SECRET_KEY'] = secret_key
+app.config['SECRET_KEY'] = secret_key  # Use the secret key from env variables
 
 def get_recipe_suggestions(ingredients):
     url = "https://api.openai.com/v1/chat/completions"
@@ -27,8 +25,7 @@ def get_recipe_suggestions(ingredients):
     response = requests.post(url, json=data, headers=headers)
     response_data = response.json()  # Get the JSON response data
 
-    # Print the response data to the terminal
-    print("API Response:", response_data)
+    print("API Response:", response_data)  # Print the response data to the terminal
 
     return response_data
 
