@@ -42,8 +42,8 @@ To set up your local development environment, follow these steps:
 ```
 Replace your_openai_api_key_here with your actual OpenAI API key. Make sure this is done in the environment where the application will run.
 
-#Running the Application
-To run the application, execute:
+# Running the Application
+**To run the application, execute**:
 ```bash
   export FLASK_APP=app.py    # Ensure this is set in your environment
   flask run                 # Start the Flask application
