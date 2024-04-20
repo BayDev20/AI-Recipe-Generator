@@ -2,6 +2,9 @@
 
 This web application allows users to enter ingredients they have on hand and receive recipe suggestions using OpenAI's GPT-3.5 model. It provides creative recipes based on the ingredients provided.
 
+![Screenshot 2024-04-12 225105 (2)](https://github.com/BayDev20/AI-Recipe-Generator/assets/152105436/bf2be08f-c9b4-472d-ab56-bd67aa735b3f)
+
+
 ## Features
 
 - User can input ingredients to see recipe suggestions.
