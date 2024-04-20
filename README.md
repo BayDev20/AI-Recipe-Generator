@@ -24,19 +24,19 @@ To set up your local development environment, follow these steps:
     git clone https://yourrepository.git
     cd yourrepository
    ```
-2. Create and activate a virtual environment:
+2. **Create and activate a virtual environment**:
    ```bash
    python -m venv venv           # Create virtual environment
    source venv/bin/activate      # Activate on Linux/macOS
    venv\Scripts\activate         # Activate on Windows
    ```
-3. Install dependencies:
+3. **Install dependencies**:
    ```bash
    pip install flask requests
    ```
 
-#Configuration
-##Set up the required environment variable for your API key:
+# Configuration
+**Set up the required environment variable for your API key**:
 ```bash
   set OPENAI_API_KEY=your_openai_api_key_here
 ```
